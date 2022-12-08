@@ -3,7 +3,7 @@ Part 1
 """
 
 # Reading data from file
-with open("input.txt") as f:
+with open("01.in") as f:
     data = f.readlines()
 
 elves_calories = []

@@ -1,7 +1,4 @@
-import sys
-sys.path.append('../')
-
-from utils.helpers import read_input
+from helpers import read_input
 
 def get_file_struct(data):
     structure = {'/': {'size': 0, 'nodes': {}}}
@@ -74,10 +71,10 @@ def get_folder_sizes(element):
 
     return folder_sizes
 
-data = read_input("input.txt")
+data = read_input("07.in")
 output = get_file_struct(data)
 output_size = get_size_for_le10k_folders(output['/'])
-print(output_size)
+print(f"Question 1's answer if {output_size}")
 
 """
 Question 2
@@ -92,14 +89,14 @@ required_space_to_free = required_free_space - current_free_space
 
 folder_sizes = sorted(get_folder_sizes(output['/']))
 
-print('---')
-print(required_space_to_free)
-print(folder_sizes)
-print('---')
+#print('---')
+#print(required_space_to_free)
+#print(folder_sizes)
+#print('---')
 
 candidate = None
 for size in reversed(folder_sizes):
     if size >= required_space_to_free:
         candidate = size
 
-print(candidate)
+print(f"Question 2's answer is {candidate}")

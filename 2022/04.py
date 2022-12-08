@@ -1,10 +1,6 @@
-import sys
+from helpers import read_input
 
-sys.path.append('../')
-
-from utils.helpers import read_input
-
-data = read_input("input.txt")
+data = read_input("04.in")
 fully_overlap = 0
 partial_overlap = 0
 

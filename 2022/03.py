@@ -58,7 +58,7 @@ def day03_question2(data):
 
     return result
 
-data = read_input("input.txt")
+data = read_input("03.in")
 result = day03_question1(data)
 print(f"Question 1's result: {result}")
 result = day03_question2(data)

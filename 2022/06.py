@@ -1,7 +1,4 @@
-import sys
-sys.path.append('../')
-
-from utils.helpers import read_input
+from helpers import read_input
 
 def is_marker(marker):
     return len(list(marker)) == len(set(marker))
@@ -18,7 +15,7 @@ def get_bytes_processed_before_marker(data, marker_length):
 
     return processed_characters
 
-data = read_input("input.txt")
-print(get_bytes_processed_before_marker(data[0], 4))
-print(get_bytes_processed_before_marker(data[0], 14))
+data = read_input("06.in")
+print(f"Question 1's answer is {get_bytes_processed_before_marker(data[0], 4)}")
+print(f"Question 2's answer is {get_bytes_processed_before_marker(data[0], 14)}")
     

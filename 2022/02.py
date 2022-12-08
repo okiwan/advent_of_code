@@ -1,5 +1,5 @@
 # We read the whole input of the file
-with open("input.txt") as f:
+with open("02.in") as f:
     data = f.readlines()
 
 def calculate_solution(input, game_config):

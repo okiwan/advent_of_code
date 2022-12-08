@@ -1,11 +1,7 @@
-import sys
 import copy
+from helpers import read_input
 
-sys.path.append('../')
-
-from utils.helpers import read_input
-
-data = read_input("input.txt")
+data = read_input("05.in")
 
 
 def parse_crane_config(data):
@@ -81,7 +77,7 @@ def apply_arrangements_9001(cc, ac):
                 tmp.append(cc[src].pop())
             except:
                 continue
-        print(tmp)
+        #print(tmp)
         cc[dst].extend(tmp[::-1])
 
 original_crane_config = parse_crane_config(data)
@@ -90,9 +86,9 @@ arrange_config = parse_arrangements(data)
 # Question 1
 crane_config = copy.deepcopy(original_crane_config)
 apply_arrangements_9000(crane_config, arrange_config)
-print(print_top_stack(crane_config))
+print(f"Question 1's answer is {print_top_stack(crane_config)}")
 
 # Question 2
 crane_config = copy.deepcopy(original_crane_config)
 apply_arrangements_9001(crane_config, arrange_config)
-print(print_top_stack(crane_config))
+print(f"Question 2's answer is {print_top_stack(crane_config)}")
