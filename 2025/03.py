@@ -14,25 +14,6 @@ with open(f"{current_filename}-{suffix}.in") as f:
 # Prepare data
 clean_data = [entry.strip() for entry in data]
 
-def kk():
-    max_heap = [-x for x in bank_batteries]
-    heapq.heapify(max_heap)
-
-    smallest_negative_1 = -heapq.heappop(max_heap)
-    smallest_negative_2 = -heapq.heappop(max_heap)
-
-def kk2():
-    start_check_position = len(bank_batteries) - 1
-    end_check_position = -1
-
-    for local_joltage_position, offset in [(0, 1), (1, 0)]:
-        for looker_loop in range(start_check_position - offset, end_check_position, -1):
-            if bank_batteries[looker_loop] > local_joltage[local_joltage_position]:
-                local_joltage[local_joltage_position] = bank_batteries[looker_loop]
-                end_check_position = looker_loop
-
-    print(local_joltage)
-
 """
 Part 1
 """
